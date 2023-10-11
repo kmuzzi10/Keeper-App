@@ -9,7 +9,8 @@ const App = ()=>{
     <Header/>
     <div className='container'>
     <div  className='row'>
-        <Note />
+        <Note title="title" content="content" />
+        <Note title="muzammil" content="work" />
     </div>
         <Footer />
     </div>

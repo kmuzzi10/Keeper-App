@@ -1,6 +1,6 @@
 import React from "react";
 
-const Note = ()=>{
+const Note = (props)=>{
 
      const styling = {
         marginTop : "20px",
@@ -14,8 +14,8 @@ const Note = ()=>{
      }
 
     return <div style={styling} className="col-lg-2 col-md-3 col-sm-4">
-        <h3>for the title</h3>
-        <p>for the content</p>
+        <h3>{props.title}</h3>
+        <p>{props.content}</p>
     </div>
 
     
