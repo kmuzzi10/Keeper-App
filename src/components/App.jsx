@@ -12,6 +12,7 @@ const App = ()=>{
     <div  className='row'>
         {notes.map(noteArray=>{
             return <Note 
+               key = {noteArray.key}
                title={noteArray.title}
                content={noteArray.content}
 
