@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
+import notes from "../notes"
 
 
 const App = ()=>{
@@ -9,8 +10,13 @@ const App = ()=>{
     <Header/>
     <div className='container'>
     <div  className='row'>
-        <Note title="title" content="content" />
-        <Note title="muzammil" content="work" />
+        {notes.map(noteArray=>{
+            return <Note 
+               title={noteArray.title}
+               content={noteArray.content}
+
+            />
+        })}
     </div>
         <Footer />
     </div>
