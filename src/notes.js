@@ -1,3 +1,4 @@
+//notes data
 const notes = [
     {
       key: 1,
