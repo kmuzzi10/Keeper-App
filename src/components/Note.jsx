@@ -1,24 +1,17 @@
 import React from "react";
 
-const Note = (props)=>{
+function Note(props) {
+  function handleClick() {
+    props.onDelete(props.id);
+  }
 
-     const styling = {
-        marginTop : "20px",
-        backgroundColor:"white",
-        width:"250px",
-        textAlign :"center",
-        marginLeft:"5px",
-        marginRight:"5px",
-        borderRadius :"7px",
-        boxShadow:"0 2px 5px #ccc"
-     }
-
-    return <div style={styling} className="col-lg-2 col-md-3 col-sm-4">
-        <h3>{props.title}</h3>
-        <p>{props.content}</p>
+  return (
+    <div className="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={handleClick}>DELETE</button>
     </div>
-
-    
-};
+  );
+}
 
 export default Note;
